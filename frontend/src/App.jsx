@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+
 function App() {
   const [text, setText] = useState('');
   const [file, setFile] = useState(null);
@@ -16,7 +18,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/process-text', { text });
+      const response = await axios.post(`${API_URL}/process-text`, { text });
       setResult(response.data);
     } catch (err) {
       setError(err.message || 'Error al procesar el texto');
@@ -34,7 +36,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/process-pdf', formData, {
+      const response = await axios.post(`${API_URL}/process-pdf`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(response.data);
