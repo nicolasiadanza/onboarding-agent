@@ -95,9 +95,3 @@ Inspirationado por el caso de éxito de Customer Data Integration de Interinnova
   }
   ```
 
-## Contacto
-Para cualquier consulta o colaboración, puedes contactarnos en [interinnova@example.com](mailto:interinnova@example.com).
-
----
-
-Este README proporciona una descripción detallada del proyecto, sus funcionalidades, el stack tecnológico utilizado y las instrucciones para configurar el entorno local. También incluye información sobre los endpoints de la API y cómo interactuar con ellos.
